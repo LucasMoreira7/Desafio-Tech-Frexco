@@ -14,11 +14,11 @@ O arquivo views.py contém todas as views que foram utilizadas no projeto. Nele 
 
 Para este projeto temos 3 views:
 
-A view createUser cria um novo usuário a partir dos dados recebidos pelo método de requisição POST. Nele verificamos se o login de cadastro já existe no banco, para evitar múltiplos usuários com o o mesmo login, verificamos se a senha digitada é nula, caso for é gerada uma senha e ela é salva neste usuário e também retornada à requisição para futuras utilizações com o front-End, e verificamos também se a senha digitada é nula, retornando uma mensagem para solicitar que digitem a senha. Para todos estes dados é ainda utilizada uma função da classe ModelsSerializer para verificar se os dados recebidos estão no formato correto para serem salvos no banco, adicionando mais uma verificação quanto a validação dos dados.
+  - A view createUser cria um novo usuário a partir dos dados recebidos pelo método de requisição POST. Nele verificamos se o login de cadastro já existe no banco, para evitar múltiplos usuários com o o mesmo login, verificamos se a senha digitada é nula, caso for é gerada uma senha e ela é salva neste usuário e também retornada à requisição para futuras utilizações com o front-End, e verificamos também se a senha digitada é nula, retornando uma mensagem para solicitar que digitem a senha. Para todos estes dados é ainda utilizada uma função da classe ModelsSerializer para verificar se os dados recebidos estão no formato correto para serem salvos no banco, adicionando mais uma verificação quanto a validação dos dados.
 
-A view usersList retorna os dados dos usuários cadastrados no banco em 3 formatos, JSON, XLSX e CSV, de acordo com o especificado na URL.
+  - A view usersList retorna os dados dos usuários cadastrados no banco em 3 formatos, JSON, XLSX e CSV, de acordo com o especificado na URL.
 
-A view getById retorna os dados do usuário pelo ID que é passado junto a URL.
+  - A view getById retorna os dados do usuário pelo ID que é passado junto a URL.
 
 Por fim temos as urls dos nossos endpoinst.
 
