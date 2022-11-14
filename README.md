@@ -12,11 +12,17 @@ O arquivo models.py contem o modelo para criação da tabela que utilizaremos no
 
 O arquivo views.py contém todas as views que foram utilizadas no projeto. Nele temos definidos os tipos de requisição e as funções que tratam e recebem os dados para serem inseridos no banco de dados. As Views utilizadas no Rest Framework são basicamente o controller da nossa aplicação.
 
-Para iniciar o servidor da nossa apllicação basta utilizar o comando "python manage.py runserver"
+Para este projeto temos 3 views:
 
-Para este projeto temos 3 views, a view createUser, que cria um novo usuário a partir dos dados recebidos pelo método de requisição POST. Nele verificamos se o login de cadastro já existe no banco, para evitar múltiplos usuários com o o mesmo login, verificamos se a senha digitada é nula, caso for é gerada uma senha e ela é salva neste usuário e também retornada à requisição para futuras utilizações com o front-End, e verificamos também se a senha digitada é nula, retornando uma mensagem para solicitar que digitem a senha. Para todos estes dados é ainda utilizada uma função da classe ModelsSerializer para verificar se os dados recebidos estão no formato correto para serem salvos no banco, adicionando mais uma verificação quanto a validação dos dados.
+A view createUser cria um novo usuário a partir dos dados recebidos pelo método de requisição POST. Nele verificamos se o login de cadastro já existe no banco, para evitar múltiplos usuários com o o mesmo login, verificamos se a senha digitada é nula, caso for é gerada uma senha e ela é salva neste usuário e também retornada à requisição para futuras utilizações com o front-End, e verificamos também se a senha digitada é nula, retornando uma mensagem para solicitar que digitem a senha. Para todos estes dados é ainda utilizada uma função da classe ModelsSerializer para verificar se os dados recebidos estão no formato correto para serem salvos no banco, adicionando mais uma verificação quanto a validação dos dados.
+
+A view usersList retorna os dados dos usuários cadastrados no banco em 3 formatos, JSON, XLSX e CSV, de acordo com o especificado na URL.
+
+A view getById retorna os dados do usuário pelo ID que é passado junto a URL.
+
 Por fim temos as urls dos nossos endpoinst.
-Para a aplicação local, o nosso servidor é iniciado em http://127.0.0.1:8000/, e temos os seguintes endpoinst:
+
+Para iniciar o servidor da nossa apllicação basta utilizar o comando "python manage.py runserver". o nosso servidor é iniciado em http://127.0.0.1:8000/, e temos os seguintes endpoinst:
 
 O endpoint /create, onde os dados do usuário são enviados em formato JSON, como mostrado o exemplo abaixo utilizando a ferramenta de desenvolvimento e teste Insomnia.
 
