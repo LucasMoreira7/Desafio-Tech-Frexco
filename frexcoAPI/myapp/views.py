@@ -10,7 +10,6 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-
 from .models import Users
 from .serializers import UsersSerializer
 import string as st
@@ -66,6 +65,15 @@ def usersList(request):
         return response
     return JsonResponse("Format invalid", safe=False)
 
+# view para listar usuário 
+
+@api_view(['GET'])
+def getById(request,id):
+        user = Users.objects.filter(id = id)
+        if not user:
+            return JsonResponse("Users not exists", safe=False)
+        users_serializer = UsersSerializer(user, many=True)
+        return JsonResponse(users_serializer.data, safe=False)
 # view para criar usuários
 
 @api_view(['POST'])
@@ -74,7 +82,11 @@ def createUser(request):
         try : 
             Users.objects.get(login = user_data['login'])
             return JsonResponse('User already exists', safe=False)
-        except Users.DoesNotExist:    
+        except Users.DoesNotExist:   
+            if(user_data['login']==''):
+                return JsonResponse('Please insert a login', safe=False)
+            if(user_data['birthDate']==''):
+                return JsonResponse('Please insert a birth date', safe=False)
             if(user_data['password']==''):    
                 aux = random.choices(st.ascii_letters, k=8) 
                 aux = ''.join(str(x) for x in aux)
@@ -89,12 +101,4 @@ def createUser(request):
                 return JsonResponse('Added successfully', safe=False)
             return JsonResponse("Failed to Add", safe=False)
 
-# view para listar usuário 
 
-@api_view(['GET'])
-def getById(request,id):
-        user = Users.objects.filter(id = id)
-        if not user:
-            return JsonResponse("Users not exists", safe=False)
-        users_serializer = UsersSerializer(user, many=True)
-        return JsonResponse(users_serializer.data, safe=False)
