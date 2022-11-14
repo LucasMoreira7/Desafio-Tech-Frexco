@@ -22,7 +22,7 @@ O endpoint /create, onde os dados do usuário são enviados em formato JSON, com
 
 ![image](https://user-images.githubusercontent.com/99613258/201769854-ffc52fd3-8cf7-49f4-9323-f0f1d28ca5e4.png)
 
-O endpoint /users, onde enviamos junto ao endereço da url o formato em que desejamos o retorno da busca dos usuários já cadastrados, sendo as urls aceitas a /users/?formato=JSON, /users/?formato=XLSX e /users/?formato=CSV, que retornaram como resposta da requisição os dados respectivamente nos formatos JOSN ,XLSX e CSV, como mostrado abaixo.
+O endpoint /users, onde enviamos junto ao endereço da url o formato em que desejamos o retorno da busca dos usuários já cadastrados, sendo as urls aceitas a /users/?formato=JSON, /users/?formato=XLSX e /users/?formato=CSV, que retornarão como resposta da requisição os dados respectivamente nos formatos JOSN ,XLSX e CSV, como mostrado abaixo.
 
 ![image](https://user-images.githubusercontent.com/99613258/201769932-b1ce8dfd-6fe1-4c46-bd30-92a329c0e562.png)
 
