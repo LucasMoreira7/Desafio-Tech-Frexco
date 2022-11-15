@@ -22,7 +22,7 @@ Para este projeto temos 3 views:
 
 Por fim temos as urls dos nossos endpoinst.
 
-Para iniciar o servidor da nossa apllicação basta utilizar o comando "python manage.py runserver". o nosso servidor é iniciado em http://127.0.0.1:8000/, e temos os seguintes endpoinst:
+Para iniciar o servidor da nossa aplicação basta utilizar o comando "python manage.py runserver". o nosso servidor é iniciado em http://127.0.0.1:8000/, e temos os seguintes endpoinst:
 
   - O endpoint http://127.0.0.1:8000/create, onde os dados do usuário são enviados em formato JSON, como mostrado o exemplo abaixo utilizando a ferramenta de desenvolvimento e teste Insomnia.
 
