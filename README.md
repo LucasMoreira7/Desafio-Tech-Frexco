@@ -32,6 +32,6 @@ O endpoint http://127.0.0.1:8000/users, onde enviamos junto ao endereço da url 
 
 ![image](https://user-images.githubusercontent.com/99613258/201769932-b1ce8dfd-6fe1-4c46-bd30-92a329c0e562.png)
 
-Além de ser possível consultar um usuário específico pelo id na url http://127.0.0.1:8000/users, basta após a url inserir o id do usuário:
+Além de ser possível consultar um usuário específico pelo id na url http://127.0.0.1:8000/users, basta após a url inserir o id do usuário e suas informações retornam em JSON:
 
 ![image](https://user-images.githubusercontent.com/99613258/201769958-22b7ab9c-373b-4ee0-ab27-f4bb03642675.png)
