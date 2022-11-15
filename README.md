@@ -24,14 +24,14 @@ Por fim temos as urls dos nossos endpoinst.
 
 Para iniciar o servidor da nossa apllicação basta utilizar o comando "python manage.py runserver". o nosso servidor é iniciado em http://127.0.0.1:8000/, e temos os seguintes endpoinst:
 
-O endpoint /create, onde os dados do usuário são enviados em formato JSON, como mostrado o exemplo abaixo utilizando a ferramenta de desenvolvimento e teste Insomnia.
+O endpoint http://127.0.0.1:8000/create, onde os dados do usuário são enviados em formato JSON, como mostrado o exemplo abaixo utilizando a ferramenta de desenvolvimento e teste Insomnia.
 
 ![image](https://user-images.githubusercontent.com/99613258/201769854-ffc52fd3-8cf7-49f4-9323-f0f1d28ca5e4.png)
 
-O endpoint /users, onde enviamos junto ao endereço da url o formato em que desejamos o retorno da busca dos usuários já cadastrados, sendo as urls aceitas a /users/?formato=JSON, /users/?formato=XLSX e /users/?formato=CSV, que retornarão como resposta da requisição os dados respectivamente nos formatos JOSN ,XLSX e CSV, como mostrado abaixo.
+O endpoint http://127.0.0.1:8000/users, onde enviamos junto ao endereço da url o formato em que desejamos o retorno da busca dos usuários já cadastrados, sendo as urls aceitas a /users/?formato=JSON, /users/?formato=XLSX e /users/?formato=CSV, que retornarão como resposta da requisição os dados respectivamente nos formatos JOSN ,XLSX e CSV, como mostrado abaixo.
 
 ![image](https://user-images.githubusercontent.com/99613258/201769932-b1ce8dfd-6fe1-4c46-bd30-92a329c0e562.png)
 
-Além de ser possível consultar um usuário específico pelo id na url /users, basta após a url inserir o id do usuário:
+Além de ser possível consultar um usuário específico pelo id na url http://127.0.0.1:8000/users, basta após a url inserir o id do usuário:
 
 ![image](https://user-images.githubusercontent.com/99613258/201769958-22b7ab9c-373b-4ee0-ab27-f4bb03642675.png)
